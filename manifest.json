@@ -1,0 +1,17 @@
+{
+  "lang": "en-us",
+  "name": "360 Comms",
+  "short_name": "360 Comms",
+  "description": "Call App.",
+  "start_url": "/",
+  "background_color": "#D7E9E9",
+  "theme_color": "#D7E9E9",        
+  "orientation": "any",
+  "display": "standalone",
+  "icons": [
+      {
+          "src": "/icon512.png",
+          "sizes": "512x512"
+      }
+  ]
+}
