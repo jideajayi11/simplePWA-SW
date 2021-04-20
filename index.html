@@ -2,11 +2,25 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <link rel="manifest" href="./manifest.json">
     <title>360 Comms</title>
   </head>
   <body>
     Welcome to 360 Comms.
   </body>
+  <script>
+    const relativePath = "/simplePWA-SW";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register(`${relativePath}/sw.js`).then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </html>
